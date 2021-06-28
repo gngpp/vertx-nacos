@@ -22,7 +22,6 @@ import java.util.Map;
 public class Main {
 
     public static void main(String[] args) throws NacosException {
-
         Vertx vertx = Vertx.vertx();
         NamingService naming = NamingFactory.createNamingService("localhost:8848");
         Instance instance = new Instance();
@@ -36,7 +35,6 @@ public class Main {
         instance.setMetadata(instanceMeta);
         // 监控健康
         instance.setHealthy(true);
-
         // 注册服务名
         naming.registerInstance("vertx-service", instance);
         Router router = Router.router(vertx);
@@ -47,7 +45,5 @@ public class Main {
         vertx.createHttpServer()
              .requestHandler(router)
              .listen(8313);
-
-        List<Route> routes = router.getRoutes();
     }
 }
