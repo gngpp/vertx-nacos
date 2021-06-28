@@ -13,8 +13,6 @@ dependencies {
     compile 'com.alibaba.nacos:nacos-client:1.4.2'
     compile 'io.vertx:vertx-core:4.0.3'
     compile 'io.vertx:vertx-web:4.0.3'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
 }
 
 test {
